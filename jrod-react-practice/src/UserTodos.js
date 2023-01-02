@@ -9,4 +9,18 @@ function UserTodos({userId}){
         .then(setTodos)
         .catch((err) => console.log(err))
     }, [])
+
+    const allTodos = todos.map((todo) => (
+        <div key={todo.id}>
+            {todo.title}
+        </div>
+    ))
+
+    return (
+        <div className="UserTodos">
+            {allTodos}
+        </div>
+    )
 }
+
+export default UserTodos
