@@ -8,7 +8,7 @@ function UserTodos({userId}){
         .then((res) => res.json())
         .then(setTodos)
         .catch((err) => console.log(err))
-    }, [])
+    }, [userId])
 
     const allTodos = todos.map((todo) => (
         <div key={todo.id}>
